@@ -35,12 +35,12 @@
     select partition 1  # Ensure this is the EFI System Partition
     assign letter=Z
     exit
-    
+
 5. **Navigate to the EFI Partition and Remove the Ubuntu Boot Directory:**
     ```Z:
     cd EFI
     rmdir /S /Q ubuntu
-
+ 
 6. **Restart Your PC and check the BIOS boot list to ensure the Ubuntu entry is gone.**
 
 ## Step 3: Installing Ubuntu 24.04
