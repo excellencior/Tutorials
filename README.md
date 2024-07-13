@@ -35,6 +35,7 @@
     select partition 1  # Ensure this is the EFI System Partition
     assign letter=Z
     exit
+    ```
 
 5. **Navigate to the EFI Partition and Remove the Ubuntu Boot Directory:**
     ```Z:
