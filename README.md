@@ -25,7 +25,7 @@
 3. **List and Remove the Unwanted Ubuntu Boot Entry:**
    ```shell
    bcdedit /enum firmware
-   bcdedit /delete {identifier}  # Replace {identifier} with the GUID of the Ubuntu entry```
+   bcdedit /delete {identifier}  # Replace {identifier} with the GUID of the Ubuntu entry
 
 4. **Identify and Select the EFI Partition:**
     ```diskpart
@@ -34,12 +34,12 @@
     list partition
     select partition 1  # Ensure this is the EFI System Partition
     assign letter=Z
-    exit```
+    exit
     
 5. **Navigate to the EFI Partition and Remove the Ubuntu Boot Directory:**
     ```Z:
     cd EFI
-    rmdir /S /Q ubuntu```
+    rmdir /S /Q ubuntu
 
 6. **Restart Your PC and check the BIOS boot list to ensure the Ubuntu entry is gone.**
 
@@ -82,7 +82,7 @@ By following these steps, you will successfully remove the old Ubuntu installati
     active
     format fs=fat32 quick or format fs=ntfs quick
     assign
-    exit```
+    exit
 - NB: You may face errors like "access denied", "don't have permission", "unknown capacity", "cannot format" etc. But this method is able to format the USB and revert it back to normal.
 
 
