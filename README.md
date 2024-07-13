@@ -24,27 +24,27 @@
 
 3. **List and Remove the Unwanted Ubuntu Boot Entry:**
    ```
-   > shell
-   > bcdedit /enum firmware
-   > bcdedit /delete {identifier}  # Replace {identifier} with the GUID of the Ubuntu entry
+   shell
+   bcdedit /enum firmware
+   bcdedit /delete {identifier}  # Replace {identifier} with the GUID of the Ubuntu entry
    ```
 
 4. **Identify and Select the EFI Partition:**
     ```
-    > diskpart
-    > list disk
-    > select disk 0  # Replace with the correct disk number if necessary
-    > list partition
-    > select partition 1  # Ensure this is the EFI System Partition
-    > assign letter=Z
-    > exit
+    diskpart
+    list disk
+    select disk 0  # Replace with the correct disk number if necessary
+    list partition
+    select partition 1  # Ensure this is the EFI System Partition
+    assign letter=Z
+    exit
     ```
 
 5. **Navigate to the EFI Partition and Remove the Ubuntu Boot Directory:**
     ```
-    > Z:
-    > cd EFI
-    > rmdir /S /Q ubuntu
+    Z:
+    cd EFI
+    rmdir /S /Q ubuntu
     ```
  
 6. **Restart Your PC and check the BIOS boot list to ensure the Ubuntu entry is gone.**
@@ -77,19 +77,19 @@ By following these steps, you will successfully remove the old Ubuntu installati
 - You can see that windows FS is not able to read the USB as it's in ext FS (Linux ISO) and it can read GPT (NTFS, FAT32 etc.) FS.
 - Follow the commands
     ```
-    > Open CMD in Administrator Mode
-    > diskpart
-    > list disk
-    > select disk [usb sl no.]
-    > clean
-    > convert gpt
-    > clean
-    > create partition primary
-    > select partition 1
-    > active
-    > format fs=fat32 quick or format fs=ntfs quick
-    > assign
-    > exit
+    Open CMD in Administrator Mode
+    diskpart
+    list disk
+    select disk [usb sl no.]
+    clean
+    convert gpt
+    clean
+    create partition primary
+    select partition 1
+    active
+    format fs=fat32 quick or format fs=ntfs quick
+    assign
+    exit
     ```
 - NB: You may face errors like "access denied", "don't have permission", "unknown capacity", "cannot format" etc. But this method is able to format the USB and revert it back to normal.
 
