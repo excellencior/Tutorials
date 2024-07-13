@@ -53,29 +53,29 @@
 
 1. **Create a Bootable USB Drive:**
 
-- Use a tool like Rufus or Balena Etcher to create a bootable USB with the Ubuntu 24.04 ISO.
-- Insert the Bootable USB and Restart Your PC.
+   - Use a tool like Rufus or Balena Etcher to create a bootable USB with the Ubuntu 24.04 ISO.
+   - Insert the Bootable USB and Restart Your PC.
 
 2. **Access the Boot Menu:**
 
-- Press the appropriate key (e.g., F12, Esc, F2, F10, Del) to access the boot menu.
-- Select the Bootable USB Drive.
+   - Press the appropriate key (e.g., F12, Esc, F2, F10, Del) to access the boot menu.
+   - Select the Bootable USB Drive.
 
 3. **Follow On-Screen Instructions to Install Ubuntu:**
 
-- Automatic Install: Easiest way (Not need to worry about allocating swap sectors / boot sectors)
-- Manual Install: Choose to install Ubuntu on the unallocated space created earlier.
-- Single Boot (Ubuntu): Select the option to erase the disk and install Ubuntu if you want to completely overwrite previous partitions.
-- Completion: Remove the bootable USB and restart your PC.
+   - Automatic Install: Easiest way (Not need to worry about allocating swap sectors / boot sectors)
+   - Manual Install: Choose to install Ubuntu on the unallocated space created earlier.
+   - Single Boot (Ubuntu): Select the option to erase the disk and install Ubuntu if you want to completely overwrite previous partitions.
+   - Completion: Remove the bootable USB and restart your PC.
 
 By following these steps, you will successfully remove the old Ubuntu installation, clean up the boot entries, and install a fresh copy of Ubuntu 24.04.
 
 ## Step 4: Making the Bootable USB Normal Again!
 
 1. **Via Windows**
-- Insert the USB while in windows 
-- You can see that windows FS is not able to read the USB as it's in ext FS (Linux ISO) and it can read GPT (NTFS, FAT32 etc.) FS.
-- Follow the commands
+   - Insert the USB while in windows 
+   - You can see that windows FS is not able to read the USB as it's in ext FS (Linux ISO) and it can read GPT (NTFS, FAT32 etc.) FS.
+   - Follow the commands
     ```
     Open CMD in Administrator Mode
     diskpart
@@ -91,6 +91,6 @@ By following these steps, you will successfully remove the old Ubuntu installati
     assign
     exit
     ```
-- NB: You may face errors like "access denied", "don't have permission", "unknown capacity", "cannot format" etc. But this method is able to format the USB and revert it back to normal.
+   - NB: You may face errors like "access denied", "don't have permission", "unknown capacity", "cannot format" etc. But this method is able to format the USB and revert it back to normal.
 
 
