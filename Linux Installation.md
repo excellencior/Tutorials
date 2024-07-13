@@ -73,6 +73,7 @@ By following these steps, you will successfully remove the old Ubuntu installati
 ## Step 4: Making the Bootable USB Normal Again!
 
 1. **Via Windows**
+---
    - Insert the USB while in windows 
    - You can see that windows FS is not able to read the USB as it's in ext FS (Linux ISO) and it can read GPT (NTFS, FAT32 etc.) FS.
    - Follow the commands
@@ -91,6 +92,6 @@ By following these steps, you will successfully remove the old Ubuntu installati
     assign
     exit
     ```
-   - NB: You may face errors like "access denied", "don't have permission", "unknown capacity", "cannot format" etc. But this method is able to format the USB and revert it back to normal.
+- **NB:** You may face errors like "access denied", "don't have permission", "unknown capacity", "cannot format" etc. But this method is able to format the USB and revert it back to normal.
 
 
